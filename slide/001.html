@@ -1,0 +1,238 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>바이브 코딩 하는 법</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background-color: #0a0a0a;
+      "
+    >
+      <!-- Background Ambient Glow (Replaces Gradient) -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 440px;
+          top: 160px;
+          width: 400px;
+          height: 400px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(160px);
+          opacity: 0.15;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Outer Decorative Frame -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 40px;
+          top: 40px;
+          width: 1200px;
+          height: 640px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 24px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Corner Decorative Dot (Top Left) -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 80px;
+          top: 80px;
+          width: 8px;
+          height: 8px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Corner Decorative Dot (Bottom Right) -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1192px;
+          top: 632px;
+          width: 8px;
+          height: 8px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Event Badge (Pill Shape) -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 340px;
+          top: 190px;
+          width: 600px;
+          height: 40px;
+          z-index: 10;
+          text-align: center;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            display: inline-block;
+            padding: 6px 18px;
+            border: 1px solid rgba(254, 42, 128, 0.5);
+            border-radius: 20px;
+            color: #fe2a80;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background-color: rgba(254, 42, 128, 0.05);
+          "
+        >
+          딸깍톤 (AI 해커톤) | 2026.03.28
+        </p>
+      </div>
+      <!-- Main Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 140px;
+          top: 270px;
+          width: 1000px;
+          height: 120px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 84px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -2px;
+            line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+          "
+        >
+          바이브 코딩 <span style="color: #fe2a80">하는 법</span>
+        </p>
+      </div>
+      <!-- Subtitle -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 240px;
+          top: 410px;
+          width: 800px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 26px;
+            font-weight: 400;
+            color: #a1a1aa;
+            letter-spacing: -0.5px;
+          "
+        >
+          참여자1 이었던 내가 해커톤 강단에서 강연을 하다니
+        </p>
+      </div>
+      <!-- Separator Line -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 620px;
+          top: 490px;
+          width: 40px;
+          height: 2px;
+          background-color: rgba(255, 255, 255, 0.15);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Presenter Info -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 490px;
+          top: 540px;
+          width: 300px;
+          height: 50px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 500;
+            color: #ffffff;
+          "
+        >
+          발표자: <span style="font-weight: 700; color: #fe2a80">운터</span>
+        </p>
+      </div>
+      <!-- Decorative Tech Element (Bottom Left Line) -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 80px;
+          top: 600px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>

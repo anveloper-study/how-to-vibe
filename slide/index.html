@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>바이브 코딩 하는 법 — 딸깍톤 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  #viewer {
+    width: 100vw; height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+  }
+  iframe {
+    border: none;
+    background: #0a0a0a;
+  }
+  #page-indicator {
+    position: fixed;
+    bottom: 20px; right: 30px;
+    color: rgba(255,255,255,0.4);
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    z-index: 100;
+    user-select: none;
+  }
+  #progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: #FE2A80;
+    transition: width 0.3s ease;
+    z-index: 100;
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="viewer">
+  <iframe id="slide-frame"></iframe>
+</div>
+<div id="page-indicator"></div>
+
+<script>
+const SLIDES = [
+  '001.html','002.html','003.html','004.html','005.html',
+  '006.html','007.html','008.html','009.html','010.html'
+];
+const TOTAL = SLIDES.length;
+let current = 0;
+
+const frame = document.getElementById('slide-frame');
+const indicator = document.getElementById('page-indicator');
+const progress = document.getElementById('progress');
+
+function fitSlide() {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const slideRatio = 1280 / 720;
+  const viewRatio = vw / vh;
+
+  let w, h;
+  if (viewRatio > slideRatio) {
+    h = vh;
+    w = h * slideRatio;
+  } else {
+    w = vw;
+    h = w / slideRatio;
+  }
+  frame.style.width = w + 'px';
+  frame.style.height = h + 'px';
+}
+
+function showSlide(idx) {
+  if (idx < 0 || idx >= TOTAL) return;
+  current = idx;
+  frame.src = SLIDES[current];
+  indicator.textContent = (current + 1) + ' / ' + TOTAL;
+  progress.style.width = ((current + 1) / TOTAL * 100) + '%';
+
+  // URL hash 업데이트
+  history.replaceState(null, '', '#' + (current + 1));
+}
+
+function next() { showSlide(current + 1); }
+function prev() { showSlide(current - 1); }
+
+// 키보드
+document.addEventListener('keydown', (e) => {
+  switch(e.key) {
+    case 'PageDown': case 'ArrowRight': case 'ArrowDown': case ' ':
+      e.preventDefault(); next(); break;
+    case 'PageUp': case 'ArrowLeft': case 'ArrowUp':
+      e.preventDefault(); prev(); break;
+    case 'Home':
+      e.preventDefault(); showSlide(0); break;
+    case 'End':
+      e.preventDefault(); showSlide(TOTAL - 1); break;
+    case 'f': case 'F':
+      // 전체화면 토글
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+      break;
+  }
+});
+
+// 터치 스와이프 (모바일)
+let touchStartX = 0;
+document.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+document.addEventListener('touchend', (e) => {
+  const dx = e.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(dx) > 50) {
+    dx < 0 ? next() : prev();
+  }
+});
+
+// 마우스 클릭 (좌/우 절반)
+document.addEventListener('click', (e) => {
+  if (e.target.closest('#page-indicator')) return;
+  const x = e.clientX / window.innerWidth;
+  x > 0.5 ? next() : prev();
+});
+
+// 리사이즈
+window.addEventListener('resize', fitSlide);
+
+// 초기화
+const hash = parseInt(location.hash.replace('#', ''));
+const startIdx = (hash >= 1 && hash <= TOTAL) ? hash - 1 : 0;
+fitSlide();
+showSlide(startIdx);
+</script>
+
+</body>
+</html>

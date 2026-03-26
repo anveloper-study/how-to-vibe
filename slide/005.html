@@ -1,0 +1,852 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DEMO — 비개발자 편</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background-color: #0a0a0a;
+      "
+    >
+      <!-- Background Ambient Glow -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 640px;
+          top: 360px;
+          width: 600px;
+          height: 600px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(250px);
+          opacity: 0.1;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Top Accent Line -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 60px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Main Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 85px;
+          width: 1080px;
+          height: 50px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -1px;
+          "
+        >
+          DEMO — 비개발자 편: v0로 딸깍 배포
+        </p>
+      </div>
+      <!-- Subtitle -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 140px;
+          width: 1080px;
+          height: 30px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 20px;
+            font-weight: 400;
+            color: #a1a1aa;
+            letter-spacing: -0.5px;
+          "
+        >
+          코드 없이, 브라우저만으로 배포까지
+        </p>
+      </div>
+      <!-- Left Column Header -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 200px;
+          width: 500px;
+          height: 30px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fe2a80;
+            letter-spacing: 0.5px;
+          "
+        >
+          라이브 시연 순서
+        </p>
+      </div>
+      <!-- Step 1 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 240px;
+          width: 520px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 1 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 252px;
+          width: 480px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #ffffff">
+          <span style="color: #fe2a80; font-weight: 700; margin-right: 12px"
+            >01</span
+          >v0.app 접속
+        </p>
+      </div>
+      <!-- Step 2 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 300px;
+          width: 520px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 2 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 312px;
+          width: 480px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #ffffff">
+          <span style="color: #fe2a80; font-weight: 700; margin-right: 12px"
+            >02</span
+          >프롬프트: "팀 매칭 서비스 메인 페이지 만들어줘"
+        </p>
+      </div>
+      <!-- Step 3 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 360px;
+          width: 520px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 3 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 372px;
+          width: 480px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #ffffff">
+          <span style="color: #fe2a80; font-weight: 700; margin-right: 12px"
+            >03</span
+          >결과 확인 → 수정 요청
+        </p>
+      </div>
+      <!-- Step 4 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 420px;
+          width: 520px;
+          height: 48px;
+          background-color: rgba(254, 42, 128, 0.1);
+          border: 1px solid rgba(254, 42, 128, 0.4);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 4 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 432px;
+          width: 480px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #ffffff; font-weight: 500">
+          <span style="color: #fe2a80; font-weight: 900; margin-right: 12px"
+            >04</span
+          >Publish 버튼 클릭 → 라이브 URL 생성
+        </p>
+      </div>
+      <!-- Right Column Header -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 660px;
+          top: 200px;
+          width: 520px;
+          height: 30px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fe2a80;
+            letter-spacing: 0.5px;
+          "
+        >
+          비개발자용 다른 도구들
+        </p>
+      </div>
+      <!-- Right Column Box Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 660px;
+          top: 240px;
+          width: 520px;
+          height: 236px;
+          background-color: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Right Column Text Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 684px;
+          top: 260px;
+          width: 472px;
+          height: 196px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0 0 14px 0; line-height: 1.4">
+          <strong style="color: #ffffff; font-size: 16px">v0 by Vercel</strong
+          ><br />
+          <span style="color: #a1a1aa; font-size: 14px"
+            >프롬프트로 UI 생성, Publish 버튼으로 딸깍 배포</span
+          >
+        </p>
+        <p style="margin: 0 0 14px 0; line-height: 1.4">
+          <strong style="color: #ffffff; font-size: 16px">Lovable</strong><br />
+          <span style="color: #a1a1aa; font-size: 14px"
+            >자연어로 앱 생성 → 원클릭 배포, DB/인증 자동 연결</span
+          >
+        </p>
+        <p style="margin: 0 0 14px 0; line-height: 1.4">
+          <strong style="color: #ffffff; font-size: 16px">Bolt.new</strong
+          ><br />
+          <span style="color: #a1a1aa; font-size: 14px"
+            >브라우저 안에서 코드 편집 + 실시간 미리보기 + 배포</span
+          >
+        </p>
+        <p style="margin: 0; line-height: 1.4">
+          <strong style="color: #ffffff; font-size: 16px">Claude.ai</strong
+          ><br />
+          <span style="color: #a1a1aa; font-size: 14px"
+            >채팅으로 코드 생성 → 복사 붙여넣기로 활용</span
+          >
+        </p>
+      </div>
+      <!-- Flowchart Section Header -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 490px;
+          width: 200px;
+          height: 20px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 13px;
+            font-weight: 700;
+            color: #666666;
+            letter-spacing: 2px;
+          "
+        >
+          PROCESS FLOW
+        </p>
+      </div>
+      <!-- Node 1 -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 520px;
+          width: 140px;
+          height: 44px;
+          background-color: rgba(255, 255, 255, 0.05);
+          border-radius: 22px;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 532px;
+          width: 140px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 15px;
+            color: #a1a1aa;
+            text-align: center;
+            font-weight: 500;
+          "
+        >
+          아이디어
+        </p>
+      </div>
+      <!-- Arrow 1 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 250px;
+          top: 530px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Node 2 -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 288px;
+          top: 520px;
+          width: 140px;
+          height: 44px;
+          background-color: rgba(255, 255, 255, 0.05);
+          border-radius: 22px;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 288px;
+          top: 532px;
+          width: 140px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 500;
+          "
+        >
+          v0 입력
+        </p>
+      </div>
+      <!-- Arrow 2 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 438px;
+          top: 530px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Node 3 -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 476px;
+          top: 520px;
+          width: 140px;
+          height: 44px;
+          background-color: rgba(255, 255, 255, 0.05);
+          border-radius: 22px;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 476px;
+          top: 532px;
+          width: 140px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 500;
+          "
+        >
+          결과 확인
+        </p>
+      </div>
+      <!-- Arrow 3 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 626px;
+          top: 530px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Node 4 -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 664px;
+          top: 520px;
+          width: 140px;
+          height: 44px;
+          background-color: rgba(255, 255, 255, 0.05);
+          border-radius: 22px;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 664px;
+          top: 532px;
+          width: 140px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 500;
+          "
+        >
+          수정 요청
+        </p>
+      </div>
+      <!-- Arrow 4 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 814px;
+          top: 530px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Node 5 -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 852px;
+          top: 520px;
+          width: 140px;
+          height: 44px;
+          background-color: rgba(254, 42, 128, 0.15);
+          border: 1px solid rgba(254, 42, 128, 0.5);
+          border-radius: 22px;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 852px;
+          top: 532px;
+          width: 140px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 700;
+          "
+        >
+          Publish
+        </p>
+      </div>
+      <!-- Arrow 5 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 1002px;
+          top: 530px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Node 6 -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1040px;
+          top: 520px;
+          width: 140px;
+          height: 44px;
+          background-color: #fe2a80;
+          box-shadow: 0 0 15px rgba(254, 42, 128, 0.4);
+          border-radius: 22px;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 1040px;
+          top: 532px;
+          width: 140px;
+          height: 24px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 15px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 900;
+          "
+        >
+          라이브 URL
+        </p>
+      </div>
+      <!-- Bottom Highlight Box -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 610px;
+          width: 1080px;
+          height: 60px;
+          background-color: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-left: 4px solid #fe2a80;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Bottom Highlight Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 628px;
+          width: 1040px;
+          height: 30px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+          "
+        >
+          <strong style="color: #fe2a80">강조:</strong> 터미널을 한 번도 안
+          열었고, 코드도 한 줄도 안 썼는데 배포까지 끝났습니다.
+        </p>
+      </div>
+      <!-- Decorative Corner Dots -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1240px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 34px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(254, 42, 128, 0.5);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>

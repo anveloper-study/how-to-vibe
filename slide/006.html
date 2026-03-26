@@ -1,0 +1,675 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>개발자는 더 깊이 갈 수 있습니다</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background-color: #0a0a0a;
+      "
+    >
+      <!-- Background Ambient Glow -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 640px;
+          top: 360px;
+          width: 600px;
+          height: 600px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(250px);
+          opacity: 0.1;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Top Accent Line -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 60px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Main Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 85px;
+          width: 1080px;
+          height: 60px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -1px;
+          "
+        >
+          개발자는 더 깊이 갈 수 있습니다
+        </p>
+      </div>
+      <!-- Subtitle -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 140px;
+          width: 1080px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 20px;
+            font-weight: 400;
+            color: #a1a1aa;
+            letter-spacing: -0.5px;
+          "
+        >
+          비개발자 도구의 한계
+          <span style="color: #fe2a80; font-weight: 700; margin: 0 8px">→</span>
+          개발자 도구로 확장
+        </p>
+      </div>
+      <!-- Vertical Divider -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 640px;
+          top: 200px;
+          width: 1px;
+          height: 450px;
+          background-color: rgba(255, 255, 255, 0.1);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Left Column Header -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 200px;
+          width: 480px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #a1a1aa;
+            letter-spacing: 0.5px;
+            text-align: center;
+          "
+        >
+          비개발자 도구로는 어려운 것들
+        </p>
+      </div>
+      <!-- Left Limit 1 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 250px;
+          width: 480px;
+          height: 70px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-left: 3px solid #666666;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Left Limit 1 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 250px;
+          width: 440px;
+          height: 70px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 18px; color: #e4e4e7; line-height: 1.4">
+          세밀한 코드 제어와 커스터마이징
+        </p>
+      </div>
+      <!-- Left Limit 2 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 345px;
+          width: 480px;
+          height: 70px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-left: 3px solid #666666;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Left Limit 2 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 345px;
+          width: 440px;
+          height: 70px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 18px; color: #e4e4e7; line-height: 1.4">
+          외부 API/서비스 연동 (MCP)
+        </p>
+      </div>
+      <!-- Left Limit 3 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 440px;
+          width: 480px;
+          height: 70px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-left: 3px solid #666666;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Left Limit 3 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 440px;
+          width: 440px;
+          height: 70px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 18px; color: #e4e4e7; line-height: 1.4">
+          기존 프로젝트에 기능 추가
+        </p>
+      </div>
+      <!-- Left Limit 4 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 535px;
+          width: 480px;
+          height: 70px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-left: 3px solid #666666;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Left Limit 4 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 535px;
+          width: 440px;
+          height: 70px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 18px; color: #e4e4e7; line-height: 1.4">
+          복잡한 비즈니스 로직 구현
+        </p>
+      </div>
+      <!-- Right Column Header -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 200px;
+          width: 480px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fe2a80;
+            letter-spacing: 0.5px;
+            text-align: center;
+          "
+        >
+          개발자 도구 파이프라인
+        </p>
+      </div>
+      <!-- Pipeline Node 1 Shape -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 250px;
+          width: 480px;
+          height: 52px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.2);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Pipeline Node 1 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 250px;
+          width: 440px;
+          height: 52px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; line-height: 1.4; width: 100%">
+          <strong style="color: #ffffff; display: inline-block; width: 160px"
+            >Google Stitch</strong
+          >
+          <span style="color: #a1a1aa">텍스트→UI 디자인 생성</span>
+        </p>
+      </div>
+      <!-- Arrow 1 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 928px;
+          top: 306px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="12" x2="12" y1="4" y2="20"></line>
+          <polyline points="5 13 12 20 19 13"></polyline>
+        </svg>
+      </div>
+      <!-- Pipeline Node 2 Shape -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 335px;
+          width: 480px;
+          height: 52px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.2);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Pipeline Node 2 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 335px;
+          width: 440px;
+          height: 52px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; line-height: 1.4; width: 100%">
+          <strong style="color: #ffffff; display: inline-block; width: 160px"
+            >stitch-mcp</strong
+          >
+          <span style="color: #a1a1aa">MCP 브릿지, 디자인 전달</span>
+        </p>
+      </div>
+      <!-- Arrow 2 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 928px;
+          top: 391px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="12" x2="12" y1="4" y2="20"></line>
+          <polyline points="5 13 12 20 19 13"></polyline>
+        </svg>
+      </div>
+      <!-- Pipeline Node 3 Shape -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 420px;
+          width: 480px;
+          height: 52px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.2);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Pipeline Node 3 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 420px;
+          width: 440px;
+          height: 52px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; line-height: 1.4; width: 100%">
+          <strong style="color: #ffffff; display: inline-block; width: 160px"
+            >Claude Code</strong
+          >
+          <span style="color: #a1a1aa">Next.js 앱 자동 변환</span>
+        </p>
+      </div>
+      <!-- Arrow 3 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 928px;
+          top: 476px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="12" x2="12" y1="4" y2="20"></line>
+          <polyline points="5 13 12 20 19 13"></polyline>
+        </svg>
+      </div>
+      <!-- Pipeline Node 4 Shape -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 505px;
+          width: 480px;
+          height: 52px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.2);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Pipeline Node 4 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 505px;
+          width: 440px;
+          height: 52px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; line-height: 1.4; width: 100%">
+          <strong style="color: #ffffff; display: inline-block; width: 160px"
+            >Vercel CLI</strong
+          >
+          <span style="color: #a1a1aa">vercel 한 줄, 30초 배포</span>
+        </p>
+      </div>
+      <!-- Arrow 4 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 928px;
+          top: 561px;
+          width: 24px;
+          height: 24px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="20"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2.5"
+          viewbox="0 0 24 24"
+          width="20"
+        >
+          <line x1="12" x2="12" y1="4" y2="20"></line>
+          <polyline points="5 13 12 20 19 13"></polyline>
+        </svg>
+      </div>
+      <!-- Pipeline Node 5 (Final) Shape -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 590px;
+          width: 480px;
+          height: 52px;
+          background-color: rgba(254, 42, 128, 0.15);
+          border: 1px solid #fe2a80;
+          border-radius: 8px;
+          z-index: 1;
+          box-shadow: 0 0 15px rgba(254, 42, 128, 0.2);
+        "
+      ></div>
+      <!-- Pipeline Node 5 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 590px;
+          width: 440px;
+          height: 52px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; line-height: 1.4; width: 100%">
+          <strong style="color: #ffffff; display: inline-block; width: 160px"
+            >라이브 URL</strong
+          >
+          <span style="color: #ffffff; font-weight: 500"
+            >전 세계에서 접근 가능</span
+          >
+        </p>
+      </div>
+      <!-- Decorative Corner Dots -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1240px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 34px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(254, 42, 128, 0.5);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>

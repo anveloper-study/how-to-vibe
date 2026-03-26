@@ -1,0 +1,639 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DEMO — 개발자 편 1: Stitch MCP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background-color: #0a0a0a;
+      "
+    >
+      <!-- Background Ambient Glow -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 640px;
+          top: 360px;
+          width: 600px;
+          height: 600px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(250px);
+          opacity: 0.1;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Top Accent Line -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 60px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Main Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 85px;
+          width: 1080px;
+          height: 60px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -1px;
+          "
+        >
+          DEMO — 개발자 편 1: Stitch MCP
+        </p>
+      </div>
+      <!-- Subtitle -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 140px;
+          width: 1080px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 20px;
+            font-weight: 400;
+            color: #a1a1aa;
+            letter-spacing: -0.5px;
+          "
+        >
+          Stitch MCP — <span style="color: #fe2a80">디자인 가져오기</span>
+        </p>
+      </div>
+      <!-- Step 1 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 200px;
+          width: 240px;
+          height: 180px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: 3px solid #fe2a80;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 1 Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 220px;
+          width: 200px;
+          height: 140px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0 0 12px 0;
+            font-size: 28px;
+            font-weight: 900;
+            color: #fe2a80;
+            letter-spacing: -1px;
+          "
+        >
+          01
+        </p>
+        <p
+          style="
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            line-height: 1.5;
+            font-weight: 500;
+            word-break: keep-all;
+          "
+        >
+          Stitch에서 Vibe Design으로 UI 생성
+        </p>
+      </div>
+      <!-- Arrow 1 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 350px;
+          top: 276px;
+          width: 20px;
+          height: 28px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="#666666"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="24"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Step 2 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 380px;
+          top: 200px;
+          width: 240px;
+          height: 180px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: 3px solid #fe2a80;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 2 Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 400px;
+          top: 220px;
+          width: 200px;
+          height: 140px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0 0 12px 0;
+            font-size: 28px;
+            font-weight: 900;
+            color: #fe2a80;
+            letter-spacing: -1px;
+          "
+        >
+          02
+        </p>
+        <p
+          style="
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            line-height: 1.5;
+            font-weight: 500;
+            word-break: keep-all;
+          "
+        >
+          Claude Code에 MCP 한 줄 등록
+        </p>
+      </div>
+      <!-- Arrow 2 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 630px;
+          top: 276px;
+          width: 20px;
+          height: 28px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="#666666"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="24"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Step 3 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 660px;
+          top: 200px;
+          width: 240px;
+          height: 180px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: 3px solid #fe2a80;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 3 Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 680px;
+          top: 220px;
+          width: 200px;
+          height: 140px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0 0 12px 0;
+            font-size: 28px;
+            font-weight: 900;
+            color: #fe2a80;
+            letter-spacing: -1px;
+          "
+        >
+          03
+        </p>
+        <p
+          style="
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            line-height: 1.5;
+            font-weight: 500;
+            word-break: keep-all;
+          "
+        >
+          디자인 가져오기 요청:<br />
+          <span style="color: #a1a1aa; font-weight: 400; font-size: 14px"
+            >"stitch에서 홈 화면 코드 가져와줘"</span
+          >
+        </p>
+      </div>
+      <!-- Arrow 3 -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 910px;
+          top: 276px;
+          width: 20px;
+          height: 28px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="#666666"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="24"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Step 4 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 940px;
+          top: 200px;
+          width: 240px;
+          height: 180px;
+          background-color: rgba(254, 42, 128, 0.08);
+          border: 1px solid rgba(254, 42, 128, 0.3);
+          border-top: 3px solid #fe2a80;
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 4 Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 960px;
+          top: 220px;
+          width: 200px;
+          height: 140px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0 0 12px 0;
+            font-size: 28px;
+            font-weight: 900;
+            color: #fe2a80;
+            letter-spacing: -1px;
+          "
+        >
+          04
+        </p>
+        <p
+          style="
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            line-height: 1.5;
+            font-weight: 500;
+            word-break: keep-all;
+          "
+        >
+          Next.js 컴포넌트로 변환:<br />
+          <span style="color: #a1a1aa; font-weight: 400; font-size: 14px"
+            >"TypeScript + Tailwind 컴포넌트로 바꿔줘"</span
+          >
+        </p>
+      </div>
+      <!-- Code Terminal Base -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 420px;
+          width: 1080px;
+          height: 150px;
+          background-color: #050505;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 8px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Code Terminal Header -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 420px;
+          width: 1080px;
+          height: 36px;
+          background-color: rgba(255, 255, 255, 0.05);
+          border-radius: 8px 8px 0 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          z-index: 2;
+        "
+      ></div>
+      <!-- Terminal Mac Dots -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 432px;
+          width: 12px;
+          height: 12px;
+          background-color: #ff5f56;
+          border-radius: 50%;
+          z-index: 3;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 140px;
+          top: 432px;
+          width: 12px;
+          height: 12px;
+          background-color: #ffbd2e;
+          border-radius: 50%;
+          z-index: 3;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 160px;
+          top: 432px;
+          width: 12px;
+          height: 12px;
+          background-color: #27c93f;
+          border-radius: 50%;
+          z-index: 3;
+        "
+      ></div>
+      <!-- Terminal Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 428px;
+          width: 1080px;
+          height: 20px;
+          z-index: 3;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-family: monospace;
+            font-size: 14px;
+            color: #666666;
+          "
+        >
+          MCP 등록 명령어
+        </p>
+      </div>
+      <!-- Code Highlight Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 130px;
+          top: 476px;
+          width: 1020px;
+          height: 90px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-family: &quot;Courier New&quot;, Courier, monospace;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e4e4e7;
+          "
+        >
+          <span style="color: #fe2a80; font-weight: bold">&gt;</span>
+          <span style="color: #4ade80">claude</span> mcp add stitch \ <br />
+          --transport http https://stitch.googleapis.com/mcp \ <br />
+          --header
+          <span style="color: #fbbf24">"X-Goog-Api-Key: YOUR-API-KEY"</span> -s
+          user
+        </p>
+      </div>
+      <!-- Bottom Emphasis Box Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 600px;
+          width: 1080px;
+          height: 60px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.3);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Bottom Emphasis Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 618px;
+          width: 1040px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+          "
+        >
+          <span style="color: #fe2a80; font-weight: 700">강조:</span> API 키 한
+          줄 등록으로 끝.
+          <span style="color: #a1a1aa"
+            >DESIGN.md로 디자인 시스템도 자동으로 함께 가져옴.</span
+          >
+        </p>
+      </div>
+      <!-- Decorative Elements -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1240px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 34px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(254, 42, 128, 0.5);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>

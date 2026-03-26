@@ -1,0 +1,587 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>프롬프트 잘 쓰는 법</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background-color: #0a0a0a;
+      "
+    >
+      <!-- Background Ambient Glow -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 640px;
+          top: 360px;
+          width: 600px;
+          height: 600px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(250px);
+          opacity: 0.1;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Top Accent Line -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 60px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 90px;
+          width: 1080px;
+          height: 60px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -1px;
+          "
+        >
+          프롬프트 잘 쓰는 법
+        </p>
+      </div>
+      <!-- Formula Box -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 180px;
+          width: 1080px;
+          height: 70px;
+          background-color: rgba(254, 42, 128, 0.08);
+          border: 1px solid rgba(254, 42, 128, 0.3);
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Formula Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 195px;
+          width: 1040px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 1px;
+          "
+        >
+          <span
+            style="
+              color: #a1a1aa;
+              font-weight: 400;
+              font-size: 20px;
+              margin-right: 16px;
+            "
+            >공식</span
+          >
+          <span style="color: #fe2a80">맥락</span>
+          <span style="color: #666666; margin: 0 12px">+</span>
+          <span style="color: #fe2a80">원하는 동작</span>
+          <span style="color: #666666; margin: 0 12px">+</span>
+          <span style="color: #fe2a80">결과 형태</span>
+        </p>
+      </div>
+      <!-- Left Column (Bad Examples) Header -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 290px;
+          width: 480px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 20px;
+            color: #a1a1aa;
+            font-weight: 500;
+            letter-spacing: 2px;
+          "
+        >
+          BEFORE (나쁜 예시)
+        </p>
+      </div>
+      <!-- Right Column (Good Examples) Header -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 290px;
+          width: 480px;
+          height: 40px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 20px;
+            color: #fe2a80;
+            font-weight: 700;
+            letter-spacing: 2px;
+          "
+        >
+          AFTER (좋은 예시)
+        </p>
+      </div>
+      <!-- Comparison Row 1: Left Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 340px;
+          width: 480px;
+          height: 80px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Comparison Row 1: Left Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 366px;
+          width: 440px;
+          height: 28px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="margin: 0; font-size: 18px; color: #a1a1aa; text-align: center"
+        >
+          "버튼 만들어줘"
+        </p>
+      </div>
+      <!-- Comparison Row 1: Arrow -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 616px;
+          top: 366px;
+          width: 48px;
+          height: 28px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="24"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Comparison Row 1: Right Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 340px;
+          width: 480px;
+          height: 80px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.4);
+          border-radius: 12px;
+          border-left: 4px solid #fe2a80;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Comparison Row 1: Right Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 356px;
+          width: 440px;
+          height: 48px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #ffffff; line-height: 1.5">
+          "오른쪽 하단에 파란 CTA 버튼, 클릭 시 팀 매칭 시작되게 해줘"
+        </p>
+      </div>
+      <!-- Comparison Row 2: Left Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 436px;
+          width: 480px;
+          height: 80px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Comparison Row 2: Left Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 462px;
+          width: 440px;
+          height: 28px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="margin: 0; font-size: 18px; color: #a1a1aa; text-align: center"
+        >
+          "예쁘게 만들어줘"
+        </p>
+      </div>
+      <!-- Comparison Row 2: Arrow -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 616px;
+          top: 462px;
+          width: 48px;
+          height: 28px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="24"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Comparison Row 2: Right Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 436px;
+          width: 480px;
+          height: 80px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.4);
+          border-radius: 12px;
+          border-left: 4px solid #fe2a80;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Comparison Row 2: Right Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 452px;
+          width: 440px;
+          height: 48px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #ffffff; line-height: 1.5">
+          "카드 컴포넌트 hover 시 그림자 + scale(1.02) 트랜지션 추가해줘"
+        </p>
+      </div>
+      <!-- Comparison Row 3: Left Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 532px;
+          width: 480px;
+          height: 80px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Comparison Row 3: Left Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 558px;
+          width: 440px;
+          height: 28px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="margin: 0; font-size: 18px; color: #a1a1aa; text-align: center"
+        >
+          "배포해줘"
+        </p>
+      </div>
+      <!-- Comparison Row 3: Arrow -->
+      <div
+        data-object="true"
+        data-object-type="icon"
+        style="
+          position: absolute;
+          left: 616px;
+          top: 558px;
+          width: 48px;
+          height: 28px;
+          z-index: 10;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <svg
+          fill="none"
+          height="24"
+          stroke="#FE2A80"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewbox="0 0 24 24"
+          width="24"
+        >
+          <line x1="5" x2="19" y1="12" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+      <!-- Comparison Row 3: Right Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 700px;
+          top: 532px;
+          width: 480px;
+          height: 80px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.4);
+          border-radius: 12px;
+          border-left: 4px solid #fe2a80;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Comparison Row 3: Right Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 720px;
+          top: 558px;
+          width: 440px;
+          height: 28px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #ffffff; line-height: 1.5">
+          "vercel로 프로덕션 배포하고 나온 URL 알려줘"
+        </p>
+      </div>
+      <!-- Bottom Tips Box -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 640px;
+          width: 1080px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.02);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Bottom Tips Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 640px;
+          width: 1040px;
+          height: 48px;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 15px;
+            color: #a1a1aa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 24px;
+          "
+        >
+          <span
+            ><strong style="color: #ffffff">💡 TIP:</strong> 에러가 났을 때 당황
+            금지 — 에러 메시지를 그대로 붙여넣으세요.</span
+          >
+          <span style="color: #444444">|</span>
+          <span
+            >비개발자 도구든 개발자 도구든 동일하게 적용되는 원칙입니다.</span
+          >
+        </p>
+      </div>
+      <!-- Decorative Elements -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1240px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 34px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(254, 42, 128, 0.5);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>

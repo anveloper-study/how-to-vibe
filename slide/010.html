@@ -1,0 +1,656 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>오늘부터 시작하는 법</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background-color: #0a0a0a;
+      "
+    >
+      <!-- Background Ambient Glow -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 640px;
+          top: 360px;
+          width: 600px;
+          height: 600px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(250px);
+          opacity: 0.1;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        "
+      ></div>
+      <!-- Top Accent Line -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 60px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Main Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 85px;
+          width: 1080px;
+          height: 55px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 38px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -1px;
+          "
+        >
+          오늘부터 시작하는 법
+        </p>
+      </div>
+      <!-- Subtitle / CTA Lead -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 145px;
+          width: 1080px;
+          height: 35px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 22px;
+            font-weight: 500;
+            color: #e4e4e7;
+            letter-spacing: -0.5px;
+          "
+        >
+          <span style="color: #a1a1aa">코드는 몰라도 됩니다.</span>
+          <strong style="color: #fe2a80">지금 바로 해커톤에서 써보세요.</strong>
+        </p>
+      </div>
+      <!-- ================= LEFT COLUMN: Non-Developer ================= -->
+      <!-- Column Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 210px;
+          width: 520px;
+          height: 330px;
+          background-color: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: 3px solid #666666;
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Column Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 130px;
+          top: 235px;
+          width: 460px;
+          height: 30px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+          "
+        >
+          비개발자 시작 가이드
+        </p>
+      </div>
+      <!-- Step 1 Bg -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 130px;
+          top: 280px;
+          width: 460px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 1 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 145px;
+          top: 292px;
+          width: 430px;
+          height: 26px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #e4e4e7">
+          <span
+            style="
+              color: #666666;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >01</span
+          >v0.app 또는 Lovable.dev 접속
+        </p>
+      </div>
+      <!-- Step 2 Bg -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 130px;
+          top: 338px;
+          width: 460px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 2 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 145px;
+          top: 350px;
+          width: 430px;
+          height: 26px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #e4e4e7">
+          <span
+            style="
+              color: #666666;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >02</span
+          >만들고 싶었던 것, 말로 설명해보기
+        </p>
+      </div>
+      <!-- Step 3 Bg -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 130px;
+          top: 396px;
+          width: 460px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 3 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 145px;
+          top: 408px;
+          width: 430px;
+          height: 26px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #e4e4e7">
+          <span
+            style="
+              color: #666666;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >03</span
+          >결과 보고, 고쳐달라고 다시 요청하기
+        </p>
+      </div>
+      <!-- Step 4 Bg (Highlight) -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 130px;
+          top: 454px;
+          width: 460px;
+          height: 56px;
+          background-color: rgba(254, 42, 128, 0.08);
+          border: 1px solid rgba(254, 42, 128, 0.3);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 4 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 145px;
+          top: 470px;
+          width: 430px;
+          height: 26px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 17px; color: #ffffff; font-weight: 500">
+          <span
+            style="
+              color: #fe2a80;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >04</span
+          >마음에 들면 Publish 버튼 클릭
+          <strong style="color: #fe2a80">(끝!)</strong>
+        </p>
+      </div>
+      <!-- ================= RIGHT COLUMN: Developer ================= -->
+      <!-- Column Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 660px;
+          top: 210px;
+          width: 520px;
+          height: 330px;
+          background-color: rgba(255, 255, 255, 0.02);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: 3px solid #fe2a80;
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Column Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 690px;
+          top: 235px;
+          width: 460px;
+          height: 30px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+          "
+        >
+          개발자 시작 가이드
+        </p>
+      </div>
+      <!-- Step 1 Bg -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 690px;
+          top: 280px;
+          width: 460px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 1 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 705px;
+          top: 292px;
+          width: 430px;
+          height: 26px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #e4e4e7">
+          <span
+            style="
+              color: #fe2a80;
+              opacity: 0.7;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >01</span
+          >Claude Code 설치
+        </p>
+      </div>
+      <!-- Step 2 Bg -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 690px;
+          top: 338px;
+          width: 460px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 2 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 705px;
+          top: 350px;
+          width: 430px;
+          height: 29px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #e4e4e7">
+          <span
+            style="
+              color: #fe2a80;
+              opacity: 0.7;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >02</span
+          >프로젝트 폴더에서
+          <code
+            style="
+              background: #222;
+              padding: 2px 6px;
+              border-radius: 4px;
+              color: #4ade80;
+            "
+            >claude</code
+          >
+          실행
+        </p>
+      </div>
+      <!-- Step 3 Bg -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 690px;
+          top: 396px;
+          width: 460px;
+          height: 48px;
+          background-color: rgba(255, 255, 255, 0.04);
+          border-radius: 8px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Step 3 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 705px;
+          top: 408px;
+          width: 430px;
+          height: 26px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 16px; color: #e4e4e7">
+          <span
+            style="
+              color: #fe2a80;
+              opacity: 0.7;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >03</span
+          >만들고 싶은 것 설명 → 코드 생성 → 확인
+        </p>
+      </div>
+      <!-- Step 4 Bg (Highlight) -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 690px;
+          top: 454px;
+          width: 460px;
+          height: 56px;
+          background-color: rgba(254, 42, 128, 0.15);
+          border: 1px solid #fe2a80;
+          border-radius: 8px;
+          z-index: 1;
+          box-shadow: 0 0 15px rgba(254, 42, 128, 0.1);
+        "
+      ></div>
+      <!-- Step 4 Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 705px;
+          top: 470px;
+          width: 430px;
+          height: 28px;
+          z-index: 10;
+        "
+      >
+        <p style="margin: 0; font-size: 17px; color: #ffffff; font-weight: 700">
+          <span
+            style="
+              color: #ffffff;
+              font-weight: 900;
+              margin-right: 12px;
+              font-size: 18px;
+            "
+            >04</span
+          ><code
+            style="
+              background: rgba(0, 0, 0, 0.3);
+              padding: 2px 6px;
+              border-radius: 4px;
+            "
+            >vercel</code
+          >
+          명령어로 라이브 배포
+        </p>
+      </div>
+      <!-- ================= BOTTOM RESOURCE LINKS ================= -->
+      <!-- Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 580px;
+          width: 1080px;
+          height: 80px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px dashed rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Title for links -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 120px;
+          top: 610px;
+          width: 120px;
+          height: 20px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 14px;
+            font-weight: 700;
+            color: #a1a1aa;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          "
+        >
+          Resources
+        </p>
+      </div>
+      <!-- Links text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 240px;
+          top: 605px;
+          width: 920px;
+          height: 30px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 20px;
+            font-family: &quot;Courier New&quot;, Courier, monospace;
+            color: #ffffff;
+            font-weight: 500;
+            text-align: right;
+          "
+        >
+          claude.ai
+          <span style="color: #fe2a80; margin: 0 12px">|</span> lovable.dev
+          <span style="color: #fe2a80; margin: 0 12px">|</span> v0.app
+          <span style="color: #fe2a80; margin: 0 12px">|</span> bolt.new
+          <span style="color: #fe2a80; margin: 0 12px">|</span>
+          stitch.withgoogle.com
+        </p>
+      </div>
+      <!-- Decorative Corner Dots -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1240px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 34px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(254, 42, 128, 0.5);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>

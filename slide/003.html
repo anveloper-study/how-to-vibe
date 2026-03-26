@@ -1,0 +1,373 @@
+<!doctype html>
+
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>바이브 코딩 3원칙</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background-color: #0a0a0a;
+      "
+    >
+      <!-- Background Ambient Glow -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 440px;
+          top: 160px;
+          width: 400px;
+          height: 400px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(200px);
+          opacity: 0.12;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Top Accent Line -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 60px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Title -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 90px;
+          width: 1080px;
+          height: 60px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -1px;
+          "
+        >
+          바이브 코딩이란?
+          <span
+            style="
+              color: #a1a1aa;
+              font-weight: 400;
+              font-size: 36px;
+              padding-left: 12px;
+            "
+            >— 3원칙</span
+          >
+        </p>
+      </div>
+      <!-- Card 1 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 100px;
+          top: 220px;
+          width: 340px;
+          height: 300px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-top: 3px solid #fe2a80;
+          border-radius: 16px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Card 1 Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 130px;
+          top: 250px;
+          width: 280px;
+          height: 240px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            font-size: 48px;
+            color: #fe2a80;
+            font-weight: 900;
+            margin: 0 0 16px 0;
+            letter-spacing: -1px;
+          "
+        >
+          01
+        </p>
+        <p
+          style="
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.5px;
+          "
+        >
+          의도 먼저
+        </p>
+        <p
+          style="
+            font-size: 16px;
+            color: #a1a1aa;
+            line-height: 1.6;
+            margin: 0;
+            word-break: keep-all;
+          "
+        >
+          기술 용어 없어도 됩니다.<br />
+          <span style="color: #ffffff">"파란 버튼 만들어줘"</span>가 시작입니다.
+        </p>
+      </div>
+      <!-- Card 2 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 470px;
+          top: 220px;
+          width: 340px;
+          height: 300px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-top: 3px solid #fe2a80;
+          border-radius: 16px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Card 2 Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 500px;
+          top: 250px;
+          width: 280px;
+          height: 240px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            font-size: 48px;
+            color: #fe2a80;
+            font-weight: 900;
+            margin: 0 0 16px 0;
+            letter-spacing: -1px;
+          "
+        >
+          02
+        </p>
+        <p
+          style="
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.5px;
+          "
+        >
+          작게 이터레이션
+        </p>
+        <p
+          style="
+            font-size: 16px;
+            color: #a1a1aa;
+            line-height: 1.6;
+            margin: 0;
+            word-break: keep-all;
+          "
+        >
+          한 번에 완성하려 하지 마세요.<br />
+          한 기능씩 확인하며 쌓으면 됩니다.
+        </p>
+      </div>
+      <!-- Card 3 Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 840px;
+          top: 220px;
+          width: 340px;
+          height: 300px;
+          background-color: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-top: 3px solid #fe2a80;
+          border-radius: 16px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Card 3 Content -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 870px;
+          top: 250px;
+          width: 280px;
+          height: 240px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            font-size: 48px;
+            color: #fe2a80;
+            font-weight: 900;
+            margin: 0 0 16px 0;
+            letter-spacing: -1px;
+          "
+        >
+          03
+        </p>
+        <p
+          style="
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            letter-spacing: -0.5px;
+          "
+        >
+          결과물 책임은 나
+        </p>
+        <p
+          style="
+            font-size: 16px;
+            color: #a1a1aa;
+            line-height: 1.6;
+            margin: 0;
+            word-break: keep-all;
+          "
+        >
+          AI가 짠 코드도 내 코드입니다.<br />
+          실행해보고 이상하면 다시 시킵니다.
+        </p>
+      </div>
+      <!-- Footer Highlight Background -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 240px;
+          top: 580px;
+          width: 800px;
+          height: 60px;
+          background-color: rgba(254, 42, 128, 0.05);
+          border: 1px solid rgba(254, 42, 128, 0.2);
+          border-radius: 30px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Footer Highlight Text -->
+      <div
+        data-object="true"
+        data-object-type="textbox"
+        style="
+          position: absolute;
+          left: 260px;
+          top: 596px;
+          width: 760px;
+          height: 28px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+          "
+        >
+          <span style="color: #a1a1aa">기존 개발과 다른 점 :</span> 타이핑 →
+          실행 <span style="color: #666666; margin: 0 8px">|</span>
+          <span style="color: #fe2a80; font-weight: 700">대화 → 확인 루프</span
+          >로 전환
+        </p>
+      </div>
+      <!-- Decorative Elements -->
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 1240px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+      <div
+        data-object="true"
+        data-object-type="shape"
+        style="
+          position: absolute;
+          left: 34px;
+          top: 680px;
+          width: 6px;
+          height: 6px;
+          background-color: rgba(254, 42, 128, 0.5);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>
