@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>딸깍톤 갤러리 슬라이드</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: #f4f4f8;
+  }
+  #slide-viewport {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #slide-wrapper {
+    width: 1280px;
+    height: 720px;
+    transform-origin: center center;
+    position: relative;
+  }
+  #page-indicator {
+    position: fixed;
+    bottom: 20px; right: 30px;
+    color: rgba(100,100,120,0.5);
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+  }
+  #progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #fe2a80, #6c5ce7);
+    transition: width 0.3s ease;
+    z-index: 1000;
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="slide-viewport">
+  <div id="slide-wrapper"></div>
+</div>
+<div id="page-indicator"></div>
+
+<script>
+const SLIDES = [
+  'slide-001.html','slide-002.html','slide-003.html','slide-004.html',
+  'slide-005.html','slide-006.html','slide-007.html','slide-008.html'
+];
+const TOTAL = SLIDES.length;
+let current = 0;
+const cache = {};
+
+const wrapper = document.getElementById('slide-wrapper');
+const indicator = document.getElementById('page-indicator');
+const progress = document.getElementById('progress');
+
+function fitSlide() {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const scale = Math.min(vw / 1280, vh / 720);
+  wrapper.style.transform = 'scale(' + scale + ')';
+}
+
+async function loadSlide(idx) {
+  if (cache[idx]) return cache[idx];
+  const res = await fetch(SLIDES[idx]);
+  const html = await res.text();
+  const match = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+  cache[idx] = match ? match[1] : html;
+  return cache[idx];
+}
+
+async function showSlide(idx) {
+  if (idx < 0 || idx >= TOTAL) return;
+  current = idx;
+  const content = await loadSlide(idx);
+  wrapper.innerHTML = content;
+  indicator.textContent = (current + 1) + ' / ' + TOTAL;
+  progress.style.width = ((current + 1) / TOTAL * 100) + '%';
+  history.replaceState(null, '', '#' + (current + 1));
+  if (idx + 1 < TOTAL) loadSlide(idx + 1);
+}
+
+function next() { showSlide(current + 1); }
+function prev() { showSlide(current - 1); }
+
+document.addEventListener('keydown', (e) => {
+  switch(e.key) {
+    case 'PageDown': case 'ArrowRight': case 'ArrowDown': case ' ':
+      e.preventDefault(); next(); break;
+    case 'PageUp': case 'ArrowLeft': case 'ArrowUp':
+      e.preventDefault(); prev(); break;
+    case 'Home':
+      e.preventDefault(); showSlide(0); break;
+    case 'End':
+      e.preventDefault(); showSlide(TOTAL - 1); break;
+    case 'f': case 'F':
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+      break;
+  }
+});
+
+let touchStartX = 0;
+document.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+document.addEventListener('touchend', (e) => {
+  const dx = e.changedTouches[0].screenX - touchStartX;
+  if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+});
+
+document.addEventListener('click', (e) => {
+  const x = e.clientX / window.innerWidth;
+  x > 0.5 ? next() : prev();
+});
+
+window.addEventListener('resize', fitSlide);
+
+const hash = parseInt(location.hash.replace('#', ''));
+const startIdx = (hash >= 1 && hash <= TOTAL) ? hash - 1 : 0;
+fitSlide();
+showSlide(startIdx);
+</script>
+
+</body>
+</html>

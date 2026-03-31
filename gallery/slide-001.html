@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>딸깍톤 갤러리</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f4f4f8;
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="slide-container"
+      style="
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #ffffff 0%, #f0eef5 100%);
+      "
+    >
+      <!-- Background Ambient Glow -->
+      <div
+        style="
+          position: absolute;
+          left: 500px;
+          top: 200px;
+          width: 400px;
+          height: 400px;
+          background-color: #fe2a80;
+          border-radius: 50%;
+          filter: blur(200px);
+          opacity: 0.08;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Secondary Glow -->
+      <div
+        style="
+          position: absolute;
+          left: 100px;
+          top: 400px;
+          width: 300px;
+          height: 300px;
+          background-color: #6c5ce7;
+          border-radius: 50%;
+          filter: blur(180px);
+          opacity: 0.06;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Top Accent Line -->
+      <div
+        style="
+          position: absolute;
+          left: 100px;
+          top: 60px;
+          width: 60px;
+          height: 4px;
+          background-color: #fe2a80;
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Badge -->
+      <div
+        style="
+          position: absolute;
+          left: 340px;
+          top: 180px;
+          width: 600px;
+          height: 40px;
+          z-index: 10;
+          text-align: center;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            display: inline-block;
+            padding: 6px 18px;
+            border: 1px solid rgba(254, 42, 128, 0.4);
+            border-radius: 20px;
+            color: #fe2a80;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background-color: rgba(254, 42, 128, 0.06);
+          "
+        >
+          GALLERY SHOWCASE
+        </p>
+      </div>
+      <!-- Main Title -->
+      <div
+        style="
+          position: absolute;
+          left: 140px;
+          top: 260px;
+          width: 1000px;
+          height: 120px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 76px;
+            font-weight: 900;
+            color: #1a1a2e;
+            letter-spacing: -3px;
+            line-height: 1.2;
+          "
+        >
+          딸깍톤 <span style="color: #fe2a80">갤러리</span>
+        </p>
+      </div>
+      <!-- Subtitle -->
+      <div
+        style="
+          position: absolute;
+          left: 240px;
+          top: 400px;
+          width: 800px;
+          height: 50px;
+          z-index: 10;
+        "
+      >
+        <p
+          style="
+            margin: 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 400;
+            color: #71717a;
+            letter-spacing: -0.5px;
+          "
+        >
+          해커톤은 끝났지만, 여러분의 기록은 지금부터입니다
+        </p>
+      </div>
+      <!-- Separator -->
+      <div
+        style="
+          position: absolute;
+          left: 610px;
+          top: 480px;
+          width: 60px;
+          height: 3px;
+          background: linear-gradient(90deg, #fe2a80, #6c5ce7);
+          border-radius: 2px;
+          z-index: 1;
+        "
+      ></div>
+      <!-- CTA Message -->
+      <div
+        style="
+          position: absolute;
+          left: 200px;
+          top: 510px;
+          width: 880px;
+          z-index: 10;
+        "
+      >
+        <div
+          style="
+            background: white;
+            border-radius: 20px;
+            padding: 24px 40px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            text-align: center;
+          "
+        >
+          <p style="margin: 0 0 8px 0; font-size: 20px; color: #1a1a2e; font-weight: 600; line-height: 1.5;">
+            <span style="color: #fe2a80;">대표 이미지</span>만이라도 꼭 등록해주세요!
+          </p>
+          <p style="margin: 0; font-size: 15px; color: #a1a1aa; line-height: 1.6;">
+            데모 영상 링크도 있다면 함께 올려주시면 좋아요 — 배포 링크는 언제든 끊길 수 있으니까요
+          </p>
+        </div>
+      </div>
+      <!-- Bottom Accent -->
+      <div
+        style="
+          position: absolute;
+          left: 80px;
+          top: 660px;
+          width: 40px;
+          height: 4px;
+          background-color: #fe2a80;
+          z-index: 1;
+        "
+      ></div>
+      <!-- Corner Dot -->
+      <div
+        style="
+          position: absolute;
+          left: 1200px;
+          top: 660px;
+          width: 8px;
+          height: 8px;
+          background-color: rgba(108, 92, 231, 0.3);
+          border-radius: 50%;
+          z-index: 1;
+        "
+      ></div>
+    </div>
+  </body>
+</html>
